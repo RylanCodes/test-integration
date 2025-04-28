@@ -211,8 +211,9 @@ img {
   overflow: hidden;
 }
 
-/* Pattern background */
-.hero-section::before {
+/* Pattern background for hero + journey + membership sections */
+.hero-section::before,
+.journey-section::before {
   content: "";
   position: absolute;
   top: 0;
@@ -226,7 +227,7 @@ img {
 /* General container (for all sections) */
 .container {
   max-width: 1440px;
-  margin: 0 auto;
+  margin-inline: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(450px, 100%), 1fr));
   gap: var(--spacing-1000);
@@ -405,6 +406,74 @@ img {
 .tech-logos {
   max-width: 100%;
   height: auto;
+}
+
+/* Section 3: parcours */
+.journey-section {
+  background-color: var(--neutral-100);
+  border-radius: var(--radius-20);
+  margin-inline: 135px;
+  position: relative;
+  overflow: hidden;
+}
+
+.journey-section .journey-container {
+  padding: var(--spacing-1000);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.journey-section h2 {
+  color: var(--neutral-900);
+  text-align: center;
+  max-width: 15ch;
+  margin-bottom: var(--spacing-800);
+}
+
+/* List */
+.journey-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-600);
+  width: 100%;
+}
+
+.journey-step {
+  counter-increment: step-counter;
+  position: relative;
+  width: 210px;
+}
+
+.journey-step::before {
+  content: counter(step-counter);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--neutral-900);
+  border-radius: var(--radius-4);
+  color: var(--neutral-900);
+  margin-bottom: var(--spacing-300);
+}
+
+/* Arrow */
+.journey-steps li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, 50%);
+  width: 140px;
+  height: 30px;
+  background-image: url("assets/images/pattern-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 /*  */
