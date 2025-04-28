@@ -150,7 +150,7 @@
 }
 
 .text-preset-5-semibold {
-  font-family: var(--font-body); /* Body text Inter */
+  font-family: var(--font-body); /* Inter for paragraphs */
   font-size: var(--font-size-5);
   font-weight: 600;
   line-height: 140%;
@@ -181,7 +181,7 @@
   letter-spacing: var(--letter-spacing-default);
 }
 
-/* Base Styles */
+/* Base styles */
 body {
   font-family: var(--font-body); /* Inter for paragraphs */
   margin: 0;
@@ -204,7 +204,6 @@ img {
   border-radius: var(--radius-20);
 }
 
-/* Hero Section */
 .hero-section {
   position: relative;
   background-color: var(--neutral-100);
@@ -224,7 +223,7 @@ img {
   opacity: 0.5;
 }
 
-/* General container (for all sections) */
+/* General container for all sections */
 .container {
   max-width: 1440px;
   margin-inline: auto;
@@ -256,6 +255,17 @@ img {
   margin-bottom: var(--spacing-400);
 }
 
+/* All button shared properties */
+.button {
+  padding: var(--spacing-250) var(--spacing-300);
+  border-radius: var(--radius-8);
+  transition: background 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+/* Button hero section*/
 .cta-button {
   display: inline-flex;
   align-items: center;
@@ -264,17 +274,11 @@ img {
   border: 2px solid var(--neutral-900);
   background: var(--light-salmon-50);
   color: var(--neutral-900);
-  padding: var(--spacing-250) var(--spacing-300);
-  border-radius: var(--radius-8);
-  transition: background 0.3s ease;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  cursor: pointer !important;
   margin-bottom: var(--spacing-250);
 }
 
 .cta-button:hover {
-  background: var(--background-gradient) !important;
+  background: var(--background-gradient);
 }
 
 .cta-button:focus {
@@ -417,8 +421,10 @@ img {
   overflow: hidden;
 }
 
-.journey-section .journey-container {
+.journey-container {
   padding: var(--spacing-1000);
+  max-width: 1440px;
+  margin-inline: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -436,8 +442,8 @@ img {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
   gap: var(--spacing-600);
   width: 100%;
 }
@@ -467,7 +473,7 @@ img {
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(50%, 50%);
+  /* transform: translate(50%, 50%); */
   width: 140px;
   height: 30px;
   background-image: url("assets/images/pattern-arrow.svg");
@@ -476,21 +482,152 @@ img {
   background-size: contain;
 }
 
-/*  */
+/* Section 4: options */
+.options-section {
+  /* background-color: var(--neutral-0); */
+  position: relative;
+  overflow: hidden;
+}
+
+.options-container {
+  max-width: 1440px;
+  margin-inline: auto;
+  /* padding-block: 120px; */
+  padding: 120px 135px;
+}
+
+.options-section h2 {
+  color: var(--neutral-900);
+  text-align: center;
+  margin-bottom: var(--spacing-800);
+}
+
+.pricing-cards {
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  gap: var(--spacing-300);
+  gap: var(--spacing-500);
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+.pricing-card {
+  background-color: var(--neutral-0);
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-8);
+  padding: var(--spacing-300);
+}
+
+/* .pricing-card.recommended {
+  background: linear-gradient(
+    150deg,
+    var(--light-salmon-50) 0%,
+    var(--neutral-200) 100%
+  );
+  position: relative;
+  overflow: hidden;
+} */
+
+.pricing-card.recommended {
+  transform: scale(1.1); /* Increase size by 10% in both dimensions */
+  z-index: 1; /* Ensure it overlaps the other cards */
+  background: radial-gradient(
+      circle at bottom right,
+      rgba(177, 236, 255, 0.5) 0%,
+      transparent 50%
+    ),
+    linear-gradient(150deg, var(--light-salmon-50) 0%, var(--neutral-200) 100%);
+  position: relative;
+}
+
+.button.subscription-button {
+  position: relative; /* Ensure the button is above the background */
+  z-index: 1; /* Ensure the button is clickable and hoverable */
+}
+
+.card-title {
+  color: var(--neutral-900);
+  /* margin-top: 0; */
+  margin-bottom: var(--spacing-300);
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-100);
+  /* margin-bottom: var(--spacing-300); */
+}
+
+.price {
+  color: var(--neutral-900);
+  margin-right: var(--spacing-100);
+}
+
+.frequency {
+  color: var(--neutral-700);
+}
+
+.divider {
+  width: 100%;
+  border: none;
+  border-top: 1px solid var(--neutral-200);
+  margin: var(--spacing-300) 0;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--spacing-400);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-200);
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-150);
+}
+
+.check-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.feature-text {
+  color: var(--neutral-700);
+  margin: 0;
+}
+
+.subscription-button {
+  display: inline-block;
+  background-color: var(--light-salmon-50);
+  color: var(--neutral-900);
+  text-align: center;
+  border: 2px solid var(--neutral-900);
+  width: 100%;
+}
+
+.subscription-button:hover {
+  background: var(--background-gradient);
+}
+
+.subscription-button:focus {
+  background: var(--background-gradient);
+  box-shadow: 0 0 0 5px var(--neutral-700), 0 0 0 3px var(--neutral-0);
+  outline: none;
+}
+
+/* Alternate Button ("EXAMINEZ LES OPTIONS D’ADHÉSION") */
 .alternate-button {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: var(--spacing-200);
-  width: fit-content;
   border: 2px solid var(--neutral-0);
-  background: var(--neutral-900);
+  background: linear-gradient(90deg, var(--neutral-700), var(--neutral-900));
   color: var(--neutral-0);
-  padding: var(--spacing-250) var(--spacing-300);
-  border-radius: var(--radius-8);
-  /* box-sizing: border-box; */
-  transition: background 0.3s ease;
-  text-decoration: none;
-  cursor: pointer;
 }
 
 .alternate-button:hover {
@@ -505,14 +642,6 @@ img {
 }
 
 /* Responsive styles */
-/* @media (max-width: 1250px) {
-  .tech-icons {
-    top: 0;
-    right: 0;
-    transform: translate(-50%, 250%);
-  }
-} */
-
 @media (min-width: 1181px) and (max-width: 1249px) {
   .tech-icons {
     top: 45%;
@@ -525,6 +654,10 @@ img {
   .hero-container,
   .section-container {
     padding: var(--spacing-1000);
+  }
+
+  .journey-section {
+    margin-inline: var(--spacing-1000);
   }
 
   .together-image {
@@ -542,8 +675,19 @@ img {
 
 @media (max-width: 1024px) {
   .hero-container,
-  .section-container {
-    padding: var(--spacing-400);
+  .section-container,
+  .journey-container,
+  .options-container {
+    padding: var(--spacing-400) !important;
+  }
+
+  .journey-section {
+    margin-inline: var(--spacing-400);
+  }
+
+  .journey-section h2 {
+    text-align: left;
+    max-width: unset;
   }
 }
 
@@ -575,6 +719,10 @@ img {
   .tech-icons {
     top: 30%;
     left: 5%;
+  }
+
+  .pricing-card.recommended {
+    transform: unset;
   }
 }
 
