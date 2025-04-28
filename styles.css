@@ -489,7 +489,8 @@ img {
   overflow: hidden;
 }
 
-.options-container {
+.options-container,
+.testimonial-container {
   max-width: 1440px;
   margin-inline: auto;
   /* padding-block: 120px; */
@@ -504,7 +505,6 @@ img {
 
 .pricing-cards {
   display: grid;
-  /* grid-template-columns: repeat(3, 1fr); */
   grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
   gap: var(--spacing-300);
   gap: var(--spacing-500);
@@ -619,6 +619,44 @@ img {
   outline: none;
 }
 
+/* Section 5: temoignage */
+.testimonial-container {
+  text-align: center;
+  display: unset;
+  align-items: unset;
+}
+
+.testimonial-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-400);
+}
+
+.testimonial-rating-wrapper {
+  display: flex;
+  gap: var(--spacing-075);
+}
+
+.testimonial-star {
+  width: 28px; /* bigger than stars in hero section */
+  height: 28px;
+}
+
+.quote,
+.author {
+  margin: 0;
+}
+
+.quote {
+  color: var(--neutral-900);
+  max-width: 35ch;
+}
+
+.author {
+  color: var(--neutral-700);
+}
+
 /* Alternate Button ("EXAMINEZ LES OPTIONS D’ADHÉSION") */
 .alternate-button {
   display: inline-flex;
@@ -677,7 +715,8 @@ img {
   .hero-container,
   .section-container,
   .journey-container,
-  .options-container {
+  .options-container,
+  .testimonial-content {
     padding: var(--spacing-400) !important;
   }
 
