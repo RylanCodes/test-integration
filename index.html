@@ -7,511 +7,465 @@
     <title>Techno Club</title>
   </head>
   <body>
-    <section class="hero-section">
-      <div class="container hero-container">
-        <div class="hero-content">
-          <img
-            src="assets/images/logo.svg"
-            alt="Logo Techno Club"
-            class="logo"
-          />
-
-          <h1 class="text-preset-1 balance">
-            Rejoignez l'ultime club de lecture techno
-          </h1>
-
-          <p class="text-preset-5-regular hero-text">
-            Transformez votre temps de lecture en temps d'apprentissage avec
-            d'autres passionnés de technologie. Recevez des recommandations
-            soigneusement sélectionnées, participez à des discussions animées et
-            améliorez vos compétences chapitre par chapitre.
-          </p>
-
-          <a href="#options" class="button cta-button text-preset-6 balance">
-            CONSULTEZ LES OPTIONS D'ADHÉSION
+    <main role="main" aria-label="Contenu principal du club de lecture techno">
+      <section class="hero-section">
+        <div class="container hero-container">
+          <div class="hero-content">
             <img
-              src="assets/images/icon-arrow-down.svg"
-              alt="Arrow Down"
-              class="arrow-down"
+              src="assets/images/logo.svg"
+              alt="Logo du Techno Club"
+              class="logo"
             />
-          </a>
-
-          <div class="testimonials">
-            <div class="avatars">
+            <h1 class="text-preset-1 balance">
+              Rejoignez l'ultime club de lecture techno
+            </h1>
+            <p class="text-preset-5-regular hero-text">
+              Transformez votre temps de lecture en temps d'apprentissage avec
+              d'autres passionnés de technologie. Recevez des recommandations
+              soigneusement sélectionnées, participez à des discussions animées
+              et améliorez vos compétences chapitre par chapitre.
+            </p>
+            <a
+              href="#options"
+              class="button cta-button text-preset-6 balance"
+              role="button"
+              aria-label="Consultez les options d'adhésion au club de lecture"
+            >
+              CONSULTEZ LES OPTIONS D'ADHÉSION
               <img
-                src="assets/images/image-avatars.webp"
-                alt="Membres Avatars"
-                class="avatars-img"
+                src="assets/images/icon-arrow-down.svg"
+                alt="Flèche vers le bas"
+                class="arrow-down"
               />
-            </div>
-
-            <div class="rating-wrapper">
-              <div class="rating">
+            </a>
+            <div class="testimonials">
+              <div class="avatars">
                 <img
-                  src="assets/images/icon-star.svg"
-                  alt="Etoile"
-                  class="star"
-                />
-                <img
-                  src="assets/images/icon-star.svg"
-                  alt="Etoile"
-                  class="star"
-                />
-                <img
-                  src="assets/images/icon-star.svg"
-                  alt="Etoile"
-                  class="star"
-                />
-                <img
-                  src="assets/images/icon-star.svg"
-                  alt="Etoile"
-                  class="star"
-                />
-                <img
-                  src="assets/images/icon-star.svg"
-                  alt="Etoile"
-                  class="star"
+                  src="assets/images/image-avatars.webp"
+                  alt="Membres du club de lecture"
+                  class="avatars-img"
                 />
               </div>
-
-              <p class="rating-text text-preset-7 balance">
-                Plus de 200 développeurs ont déjà rejoint
-              </p>
+              <div class="rating-wrapper">
+                <div class="rating">
+                  <img src="assets/images/icon-star.svg" alt="" class="star" />
+                  <img src="assets/images/icon-star.svg" alt="" class="star" />
+                  <img src="assets/images/icon-star.svg" alt="" class="star" />
+                  <img src="assets/images/icon-star.svg" alt="" class="star" />
+                  <img src="assets/images/icon-star.svg" alt="" class="star" />
+                </div>
+                <p class="rating-text text-preset-7 balance">
+                  Plus de 200 développeurs ont déjà rejoint
+                </p>
+              </div>
             </div>
           </div>
+          <div class="hero-image">
+            <picture>
+              <source
+                media="(max-width: 768px)"
+                srcset="assets/images/image-hero-mobile.webp"
+              />
+              <source
+                media="(max-width: 1024px)"
+                srcset="assets/images/image-hero-tablet.webp"
+              />
+              <img
+                src="assets/images/image-hero-desktop.webp"
+                alt="Club de lecture Techno Club"
+                class="main-hero-image border-radius-img"
+              />
+            </picture>
+          </div>
         </div>
+      </section>
 
-        <div class="hero-image">
-          <picture>
-            <source
-              media="(max-width: 768px)"
-              srcset="assets/images/image-hero-mobile.webp"
-            />
-            <source
-              media="(max-width: 1024px)"
-              srcset="assets/images/image-hero-tablet.webp"
-            />
+      <!-- "Lisez ensemble" -->
+      <section class="read-together-section">
+        <div class="container section-container">
+          <div class="together-image">
+            <picture>
+              <source
+                media="(max-width: 768px)"
+                srcset="assets/images/image-read-together-mobile.webp"
+              />
+              <source
+                media="(max-width: 1024px)"
+                srcset="assets/images/image-read-together-tablet.webp"
+              />
+              <img
+                src="assets/images/image-read-together-desktop.webp"
+                alt="Personnes lisant ensemble"
+                class="section-image border-radius-img"
+              />
+            </picture>
+          </div>
+          <div class="together-content">
+            <h2 class="text-preset-2">Lisez ensemble, progressez ensemble</h2>
+            <ul class="benefits-list">
+              <li class="benefit-item">
+                <img
+                  src="assets/images/icon-check.svg"
+                  alt="Check"
+                  class="check-icon"
+                />
+                <p class="text-preset-5-regular balance">
+                  Sélections mensuelles de lectures technologiques par des
+                  experts du secteur
+                </p>
+              </li>
+              <li class="benefit-item">
+                <img
+                  src="assets/images/icon-check.svg"
+                  alt="Check"
+                  class="check-icon"
+                />
+                <p class="text-preset-5-regular balance">
+                  Rencontres virtuelles et en présentiel pour des échanges
+                  approfondis
+                </p>
+              </li>
+              <li class="benefit-item">
+                <img
+                  src="assets/images/icon-check.svg"
+                  alt="Check"
+                  class="check-icon"
+                />
+                <p class="text-preset-5-regular balance">
+                  Accès privilégié aux nouvelles publications de livres
+                  technologiques
+                </p>
+              </li>
+              <li class="benefit-item">
+                <img
+                  src="assets/images/icon-check.svg"
+                  alt="Check"
+                  class="check-icon"
+                />
+                <p class="text-preset-5-regular balance">
+                  Sessions de questions-réponses avec des influenceurs du
+                  secteur technologique
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- "Pas un club de lecture" -->
+      <section class="club-section">
+        <div class="container section-container">
+          <div class="club-content">
+            <h2 class="text-preset-2">
+              Pas un <span class="highlighted">club</span> de lecture ordinaire
+            </h2>
+            <p class="club-text text-preset-5-regular pretty">
+              Connectez-vous avec une communauté qui parle votre langue - de
+              Python à TypeScript et tout ce qu'il y a entre les deux. Nos
+              discussions allient profondeur technique et applications
+              pratiques.
+            </p>
+          </div>
+          <div class="club-image">
+            <picture>
+              <source
+                media="(max-width: 768px)"
+                srcset="assets/images/image-not-average-mobile.webp"
+              />
+              <source
+                media="(max-width: 1024px)"
+                srcset="assets/images/image-not-average-tablet.webp"
+              />
+              <img
+                src="assets/images/image-not-average-desktop.webp"
+                alt="Personnes discutant ensemble"
+                class="section-image border-radius-img"
+              />
+            </picture>
+          </div>
+          <div class="tech-icons">
             <img
-              src="assets/images/image-hero-desktop.webp"
-              alt="Club de lecture Techno Club"
-              class="main-hero-image border-radius-img"
+              src="assets/images/logos-tech.svg"
+              alt="Logos technologies"
+              class="tech-logos"
             />
-          </picture>
-          <div
-            class="glow-effect"
-            style="background-image: url('assets/images/pattern-glow.svg')"
-          ></div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- "Lisez ensemble" -->
-    <section class="read-together-section">
-      <div class="container section-container">
-        <div class="together-image">
-          <picture>
-            <source
-              media="(max-width: 768px)"
-              srcset="assets/images/image-read-together-mobile.webp"
-            />
-            <source
-              media="(max-width: 1024px)"
-              srcset="assets/images/image-read-together-tablet.webp"
-            />
-            <img
-              src="assets/images/image-read-together-desktop.webp"
-              alt="Personnes lisant ensemble"
-              class="section-image border-radius-img"
-            />
-          </picture>
-        </div>
-
-        <div class="together-content">
-          <h2 class="text-preset-2">Lisez ensemble, progressez ensemble</h2>
-
-          <ul class="benefits-list">
-            <li class="benefit-item">
-              <img
-                src="assets/images/icon-check.svg"
-                alt="Check"
-                class="check-icon"
-              />
-              <p class="text-preset-5-regular balance">
-                Sélections mensuelles de lectures technologiques par des experts
-                du secteur
-              </p>
-            </li>
-            <li class="benefit-item">
-              <img
-                src="assets/images/icon-check.svg"
-                alt="Check"
-                class="check-icon"
-              />
-              <p class="text-preset-5-regular balance">
-                Rencontres virtuelles et en présentiel pour des échanges
-                approfondis
-              </p>
-            </li>
-            <li class="benefit-item">
-              <img
-                src="assets/images/icon-check.svg"
-                alt="Check"
-                class="check-icon"
-              />
-              <p class="text-preset-5-regular balance">
-                Accès privilégié aux nouvelles publications de livres
-                technologiques
-              </p>
-            </li>
-            <li class="benefit-item">
-              <img
-                src="assets/images/icon-check.svg"
-                alt="Check"
-                class="check-icon"
-              />
-              <p class="text-preset-5-regular balance">
-                Sessions de questions-réponses avec des influenceurs du secteur
-                technologique
-              </p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- "Pas un club de lecture" -->
-    <section class="club-section">
-      <div class="container section-container">
-        <div class="club-content">
-          <h2 class="text-preset-2">
-            Pas un <span class="highlighted">club</span> de lecture ordinaire
+      <!-- Parcours de lecture -->
+      <section class="journey-section">
+        <div class="journey-container">
+          <h2 class="text-preset-2 balance">
+            Votre parcours de lecture technologique
           </h2>
-          <p class="club-text text-preset-5-regular">
-            Connectez-vous avec une communauté qui parle votre langue - de
-            Python à TypeScript et tout ce qu'il y a entre les deux. Nos
-            discussions allient profondeur technique et applications pratiques.
-          </p>
+          <ol class="journey-steps">
+            <li class="journey-step text-preset-6">
+              <div class="step-content">
+                <p class="step-text text-preset-6">
+                  Choisissez votre niveau d'adhésion
+                </p>
+              </div>
+            </li>
+            <li class="journey-step text-preset-6">
+              <div class="step-content">
+                <p class="step-text text-preset-6">
+                  Recevez votre sélection de livres mensuels
+                </p>
+              </div>
+            </li>
+            <li class="journey-step text-preset-6">
+              <div class="step-content">
+                <p class="step-text text-preset-6">
+                  Rejoignez nos forums de discussion
+                </p>
+              </div>
+            </li>
+            <li class="journey-step text-preset-6">
+              <div class="step-content">
+                <p class="step-text text-preset-6">
+                  Participez à des rencontres exclusives
+                </p>
+              </div>
+            </li>
+          </ol>
         </div>
+      </section>
 
-        <div class="club-image">
-          <picture>
-            <source
-              media="(max-width: 768px)"
-              srcset="assets/images/image-not-average-mobile.webp"
-            />
-            <source
-              media="(max-width: 1024px)"
-              srcset="assets/images/image-not-average-tablet.webp"
-            />
-            <img
-              src="assets/images/image-not-average-desktop.webp"
-              alt="Personnes discutant ensemble"
-              class="section-image border-radius-img"
-            />
-          </picture>
-        </div>
-
-        <div class="tech-icons">
-          <img
-            src="assets/images/logos-tech.svg"
-            alt="Logos technologies"
-            class="tech-logos"
-          />
-        </div>
-      </div>
-    </section>
-
-    <!-- Parcours de lecture -->
-    <section class="journey-section">
-      <div class="journey-container">
-        <h2 class="text-preset-2 balance">
-          Votre parcours de lecture technologique
-        </h2>
-
-        <ol class="journey-steps">
-          <li class="journey-step text-preset-6">
-            <div class="step-content">
-              <p class="step-text text-preset-6">
-                Choisissez votre niveau d'adhésion
-              </p>
+      <!-- Options d'adhésion -->
+      <section id="options" class="options-section">
+        <div class="options-container">
+          <h2 class="options-title text-preset-2 balance">
+            Options d'adhésion
+          </h2>
+          <div class="pricing-cards">
+            <!-- Débutant -->
+            <div class="pricing-card">
+              <h3 class="card-title text-preset-4-semibold">Débutant</h3>
+              <div class="price-container">
+                <span class="price text-preset-3">19$</span>
+                <span class="frequency text-preset-5-regular">/mois</span>
+              </div>
+              <hr class="divider" />
+              <ul class="features-list">
+                <li class="feature-item">
+                  <img
+                    src="assets/images/icon-check.svg"
+                    alt="Check"
+                    class="check-icon"
+                  />
+                  <span class="feature-text text-preset-5-regular"
+                    >1 livre/mois</span
+                  >
+                </li>
+                <li class="feature-item">
+                  <img
+                    src="assets/images/icon-check.svg"
+                    alt="Check"
+                    class="check-icon"
+                  />
+                  <span class="feature-text text-preset-5-regular"
+                    >Forums en ligne</span
+                  >
+                </li>
+              </ul>
+              <a
+                href="#"
+                class="button subscription-button text-preset-6"
+                role="button"
+                aria-label="S'abonner au plan Débutant"
+                >ABONNEZ-VOUS</a
+              >
             </div>
-          </li>
-
-          <li class="journey-step text-preset-6">
-            <div class="step-content">
-              <p class="step-text text-preset-6">
-                Recevez votre sélection de livres mensuels
-              </p>
+            <!-- Pro -->
+            <div class="pricing-card recommended">
+              <h3 class="card-title text-preset-4-semibold">Pro</h3>
+              <div class="price-container">
+                <span class="price text-preset-3">29$</span>
+                <span class="frequency text-preset-5-regular">/mois</span>
+              </div>
+              <hr class="divider" />
+              <ul class="features-list">
+                <li class="feature-item">
+                  <img
+                    src="assets/images/icon-check.svg"
+                    alt="Check"
+                    class="check-icon"
+                  />
+                  <span class="feature-text text-preset-5-regular"
+                    >2 livres/mois</span
+                  >
+                </li>
+                <li class="feature-item">
+                  <img
+                    src="assets/images/icon-check.svg"
+                    alt="Check"
+                    class="check-icon"
+                  />
+                  <span class="feature-text text-preset-5-regular"
+                    >Rencontres virtuelles</span
+                  >
+                </li>
+              </ul>
+              <a
+                href="#"
+                class="button subscription-button text-preset-6"
+                role="button"
+                aria-label="S'abonner au plan Pro"
+                >ABONNEZ-VOUS</a
+              >
             </div>
-          </li>
-
-          <li class="journey-step text-preset-6">
-            <div class="step-content">
-              <p class="step-text text-preset-6">
-                Rejoignez nos forums de discussion
-              </p>
+            <!-- Enterprise -->
+            <div class="pricing-card">
+              <h3 class="card-title text-preset-4-semibold">Entreprise</h3>
+              <div class="price-container">
+                <span class="price text-preset-3">99$</span>
+                <span class="frequency text-preset-5-regular">/mois</span>
+              </div>
+              <hr class="divider" />
+              <ul class="features-list">
+                <li class="feature-item">
+                  <img
+                    src="assets/images/icon-check.svg"
+                    alt="Check"
+                    class="check-icon"
+                  />
+                  <span class="feature-text text-preset-5-regular"
+                    >Accès équipe</span
+                  >
+                </li>
+                <li class="feature-item">
+                  <img
+                    src="assets/images/icon-check.svg"
+                    alt="Check"
+                    class="check-icon"
+                  />
+                  <span class="feature-text text-preset-5-regular"
+                    >Sessions privées</span
+                  >
+                </li>
+              </ul>
+              <a
+                href="#"
+                class="button subscription-button text-preset-6"
+                role="button"
+                aria-label="Contacter pour discuter du plan Entreprise"
+                >DISCUTONS</a
+              >
             </div>
-          </li>
-
-          <li class="journey-step text-preset-6">
-            <div class="step-content">
-              <p class="step-text text-preset-6">
-                Participez à des rencontres exclusives
-              </p>
-            </div>
-          </li>
-        </ol>
-
-        <div
-          class="glow-effect"
-          style="background-image: url('assets/images/pattern-glow.svg')"
-        ></div>
-      </div>
-    </section>
-
-    <!-- Options d'adhésion -->
-    <section id="#options" class="options-section">
-      <div class="options-container">
-        <h2 class="options-title text-preset-2 balance">Options d'adhésion</h2>
-
-        <div class="pricing-cards">
-          <!-- Débutant -->
-          <div class="pricing-card">
-            <h3 class="card-title text-preset-4-semibold">Débutant</h3>
-            <div class="price-container">
-              <span class="price text-preset-3">19$</span>
-              <span class="frequency text-preset-5-regular">/mois</span>
-            </div>
-
-            <hr class="divider" />
-
-            <ul class="features-list">
-              <li class="feature-item">
-                <img
-                  src="assets/images/icon-check.svg"
-                  alt="Check"
-                  class="check-icon"
-                />
-                <span class="feature-text text-preset-5-regular"
-                  >1 livre/mois</span
-                >
-              </li>
-              <li class="feature-item">
-                <img
-                  src="assets/images/icon-check.svg"
-                  alt="Check"
-                  class="check-icon"
-                />
-                <span class="feature-text text-preset-5-regular"
-                  >Forums en ligne</span
-                >
-              </li>
-            </ul>
-
-            <a href="#" class="button subscription-button text-preset-6"
-              >ABONNEZ-VOUS</a
-            >
-          </div>
-
-          <!-- Pro -->
-          <div class="pricing-card recommended">
-            <h3 class="card-title text-preset-4-semibold">Pro</h3>
-            <div class="price-container">
-              <span class="price text-preset-3">29$</span>
-              <span class="frequency text-preset-5-regular">/mois</span>
-            </div>
-
-            <hr class="divider" />
-
-            <ul class="features-list">
-              <li class="feature-item">
-                <img
-                  src="assets/images/icon-check.svg"
-                  alt="Check"
-                  class="check-icon"
-                />
-                <span class="feature-text text-preset-5-regular"
-                  >2 livres/mois</span
-                >
-              </li>
-              <li class="feature-item">
-                <img
-                  src="assets/images/icon-check.svg"
-                  alt="Check"
-                  class="check-icon"
-                />
-                <span class="feature-text text-preset-5-regular"
-                  >Rencontres virtuelles</span
-                >
-              </li>
-            </ul>
-
-            <a href="#" class="button subscription-button text-preset-6"
-              >ABONNEZ-VOUS</a
-            >
-          </div>
-
-          <!-- Enterprise -->
-          <div class="pricing-card">
-            <h3 class="card-title text-preset-4-semibold">Entreprise</h3>
-            <div class="price-container">
-              <span class="price text-preset-3">99$</span>
-              <span class="frequency text-preset-5-regular">/mois</span>
-            </div>
-
-            <hr class="divider" />
-
-            <ul class="features-list">
-              <li class="feature-item">
-                <img
-                  src="assets/images/icon-check.svg"
-                  alt="Check"
-                  class="check-icon"
-                />
-                <span class="feature-text text-preset-5-regular"
-                  >Accès équipe</span
-                >
-              </li>
-              <li class="feature-item">
-                <img
-                  src="assets/images/icon-check.svg"
-                  alt="Check"
-                  class="check-icon"
-                />
-                <span class="feature-text text-preset-5-regular"
-                  >Sessions privées</span
-                >
-              </li>
-            </ul>
-
-            <a href="#" class="button subscription-button text-preset-6"
-              >DISCUTONS</a
-            >
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Témoignage -->
-    <section class="testimonial-section">
-      <div class="testimonial-container">
-        <div class="testimonial-content">
-          <div class="testimonial-rating-wrapper">
-            <img
-              src="assets/images/icon-star.svg"
-              alt="Etoile"
-              class="testimonial-star"
-            />
-            <img
-              src="assets/images/icon-star.svg"
-              alt="Etoile"
-              class="testimonial-star"
-            />
-            <img
-              src="assets/images/icon-star.svg"
-              alt="Etoile"
-              class="testimonial-star"
-            />
-            <img
-              src="assets/images/icon-star.svg"
-              alt="Etoile"
-              class="testimonial-star"
-            />
-            <img
-              src="assets/images/icon-star.svg"
-              alt="Etoile"
-              class="testimonial-star"
-            />
+      <!-- Témoignage -->
+      <section class="testimonial-section">
+        <div class="testimonial-container">
+          <div class="testimonial-content">
+            <div class="testimonial-rating-wrapper">
+              <img
+                src="assets/images/icon-star.svg"
+                alt=""
+                class="testimonial-star"
+              />
+              <img
+                src="assets/images/icon-star.svg"
+                alt=""
+                class="testimonial-star"
+              />
+              <img
+                src="assets/images/icon-star.svg"
+                alt=""
+                class="testimonial-star"
+              />
+              <img
+                src="assets/images/icon-star.svg"
+                alt=""
+                class="testimonial-star"
+              />
+              <img
+                src="assets/images/icon-star.svg"
+                alt=""
+                class="testimonial-star"
+              />
+            </div>
+            <blockquote class="quote text-preset-3">
+              « Ce club de lecture a transformé ma lecture technique d’une
+              activité solitaire en une expérience communautaire enrichissante.
+              Les discussions sont précieuses ! »
+            </blockquote>
+            <p class="author text-preset-5-regular">
+              Sarah Chen, Architecte Logiciel
+            </p>
           </div>
-          <blockquote class="quote text-preset-3">
-            « Ce club de lecture a transformé ma lecture technique d’une
-            activité solitaire en une expérience communautaire enrichissante.
-            Les discussions sont précieuses ! »
-          </blockquote>
-          <p class="author text-preset-5-regular">
-            Sarah Chen, Architecte Logiciel
-          </p>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer-section">
+    <footer
+      class="footer-section"
+      role="contentinfo"
+      aria-label="Pied de page avec informations sur le club et liens sociaux"
+    >
       <div class="footer-container">
         <h2 class="text-preset-2 footer-title">
           Prêt à déboguer votre liste de lecture ?
         </h2>
-
         <a
           href="#options"
           class="button alternate-button text-preset-6 balance"
+          role="button"
+          aria-label="Examiner les options d'adhésion au club de lecture"
         >
           EXAMINEZ LES OPTIONS D'ADHÉSION
           <img
             src="assets/images/icon-arrow-up.svg"
-            alt="Arrow Up"
+            alt="Flèche vers le haut"
             class="arrow-up"
           />
         </a>
-
         <div class="footer-testimonials">
           <div class="avatars">
             <img
               src="assets/images/image-avatars.webp"
-              alt="Membres Avatars"
+              alt="Membres du club de lecture"
               class="avatars-img"
             />
           </div>
-
           <div class="footer-rating-wrapper">
             <div class="rating">
-              <img
-                src="assets/images/icon-star.svg"
-                alt="Etoile"
-                class="star"
-              />
-              <img
-                src="assets/images/icon-star.svg"
-                alt="Etoile"
-                class="star"
-              />
-              <img
-                src="assets/images/icon-star.svg"
-                alt="Etoile"
-                class="star"
-              />
-              <img
-                src="assets/images/icon-star.svg"
-                alt="Etoile"
-                class="star"
-              />
-              <img
-                src="assets/images/icon-star.svg"
-                alt="Etoile"
-                class="star"
-              />
+              <img src="assets/images/icon-star.svg" alt="" class="star" />
+              <img src="assets/images/icon-star.svg" alt="" class="star" />
+              <img src="assets/images/icon-star.svg" alt="" class="star" />
+              <img src="assets/images/icon-star.svg" alt="" class="star" />
+              <img src="assets/images/icon-star.svg" alt="" class="star" />
             </div>
-
             <p class="footer-rating-text text-preset-7 balance">
               Plus de 200 développeurs déjà rejoints
             </p>
           </div>
         </div>
-
         <div class="footer-bottom">
           <p class="copyright text-preset-7">
             &#169; 2024 - Club de Lecture Tech
           </p>
-
           <div class="social-links">
-            <a href="#" class="social-link">
+            <a
+              href="#"
+              class="social-link"
+              aria-label="Visiter notre page Bluesky"
+            >
               <img
                 src="assets/images/logo-bluesky.svg"
                 alt="Bluesky"
                 class="social-icon"
               />
             </a>
-            <a href="#" class="social-link">
+            <a
+              href="#"
+              class="social-link"
+              aria-label="Visiter notre page LinkedIn"
+            >
               <img
                 src="assets/images/logo-linkedin.svg"
                 alt="LinkedIn"

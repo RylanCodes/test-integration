@@ -193,6 +193,10 @@ body {
   text-wrap: balance;
 }
 
+.pretty {
+  text-wrap: pretty;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -210,7 +214,7 @@ img {
   overflow: hidden;
 }
 
-/* Pattern background for hero + journey + membership sections */
+/* Pattern background */
 .hero-section::before,
 .journey-section::before,
 .footer-section::before {
@@ -220,6 +224,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 
 .hero-section::before,
@@ -232,7 +237,7 @@ img {
   opacity: 1;
 }
 
-/* General container for all sections */
+/* General container for sections */
 .container {
   max-width: 1440px;
   margin-inline: auto;
@@ -244,6 +249,8 @@ img {
 
 .hero-container {
   padding: var(--spacing-400) 135px var(--spacing-1000);
+  position: relative;
+  z-index: 2; /* To place it above the pattern */
 }
 
 .hero-content .logo {
@@ -256,6 +263,7 @@ img {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  margin-top: 0;
   margin-bottom: var(--spacing-300);
 }
 
@@ -274,8 +282,9 @@ img {
   box-sizing: border-box;
 }
 
-/* Button hero section*/
+/* Button hero section */
 .cta-button {
+  position: relative; /* Added this for hover to work */
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-200);
@@ -328,24 +337,27 @@ img {
   margin: 0;
 }
 
-.glow-effect {
+.main-hero-image {
+  position: relative;
+  z-index: 2; /* So that pattern is behind image */
+}
+
+.hero-section::after,
+.journey-section::after {
+  content: "";
   position: absolute;
   bottom: -100px;
   right: -100px;
   width: 600px;
-  height: 600px;
+  height: 700px;
+  background-image: url("assets/images/pattern-glow.svg");
+  z-index: 1;
 }
 
 /* Section 1: lisez ensemble */
-.read-together-section,
-.club-section {
-  background-color: var(--neutral-0);
-  /* position: relative;
-  overflow: hidden; */
-}
-
 .section-container {
-  padding: 120px 135px;
+  padding-top: 120px;
+  padding-inline: 135px;
 }
 
 .together-content h2,
@@ -353,6 +365,7 @@ img {
   margin-bottom: var(--spacing-400);
   color: var(--neutral-900);
   max-width: 16ch;
+  margin-top: 0;
 }
 
 .benefits-list {
@@ -422,6 +435,8 @@ img {
 
 /* Section 3: parcours */
 .journey-section {
+  max-width: 1440px;
+  margin-top: 120px;
   background-color: var(--neutral-100);
   border-radius: var(--radius-20);
   margin-inline: 135px;
@@ -442,6 +457,7 @@ img {
   color: var(--neutral-900);
   text-align: center;
   max-width: 15ch;
+  margin-top: 0;
   margin-bottom: var(--spacing-800);
 }
 
@@ -459,7 +475,7 @@ img {
 .journey-step {
   counter-increment: step-counter;
   position: relative;
-  width: 210px;
+  max-width: 210px;
 }
 
 .journey-step::before {
@@ -481,7 +497,6 @@ img {
   position: absolute;
   top: 0;
   right: 0;
-  /* transform: translate(50%, 50%); */
   width: 140px;
   height: 30px;
   background-image: url("assets/images/pattern-arrow.svg");
@@ -491,22 +506,16 @@ img {
 }
 
 /* Section 4: options */
-.options-section {
-  /* background-color: var(--neutral-0); */
-  position: relative;
-  overflow: hidden;
-}
-
 .options-container {
   max-width: 1440px;
   margin-inline: auto;
-  /* padding-block: 120px; */
   padding: 120px 135px 0px 135px;
 }
 
 .options-section h2 {
   color: var(--neutral-900);
   text-align: center;
+  margin-top: 0;
   margin-bottom: var(--spacing-800);
 }
 
@@ -538,11 +547,6 @@ img {
   position: relative;
 }
 
-.button.subscription-button {
-  position: relative; /* Ensure the button is above the background */
-  z-index: 1; /* Ensure the button is clickable and hoverable */
-}
-
 .card-title {
   color: var(--neutral-900);
   margin-top: 0;
@@ -553,7 +557,6 @@ img {
   display: flex;
   align-items: center;
   gap: var(--spacing-100);
-  /* margin-bottom: var(--spacing-300); */
 }
 
 .price {
@@ -639,7 +642,7 @@ img {
 }
 
 .testimonial-star {
-  width: 28px; /* bigger than stars in hero section */
+  width: 28px; /* Bigger than stars in hero section */
   height: 28px;
 }
 
@@ -744,12 +747,6 @@ img {
   gap: var(--spacing-300);
 }
 
-/* .social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
-
 .social-icon {
   width: 22px;
   height: 22px;
@@ -761,6 +758,12 @@ img {
 }
 
 /* Responsive styles */
+@media (min-width: 1700px) {
+  .journey-section {
+    margin-inline: auto;
+  }
+}
+
 @media (min-width: 1181px) and (max-width: 1249px) {
   .tech-icons {
     top: 45%;
@@ -808,6 +811,7 @@ img {
   }
 
   .journey-section {
+    margin-block: var(--spacing-400);
     margin-inline: var(--spacing-400);
   }
 
@@ -847,7 +851,7 @@ img {
     font-size: var(--font-size-6-mobile);
   }
 
-  .cta-button {
+  .button {
     padding: var(--spacing-200) var(--spacing-250);
   }
 
@@ -864,6 +868,10 @@ img {
     transform: unset;
   }
 
+  .options-section h2 {
+    text-align: left;
+  }
+
   .footer-container {
     padding: var(--spacing-400);
   }
@@ -874,7 +882,7 @@ img {
     margin-bottom: var(--spacing-600);
   }
 
-  .footer-rating-wrapper  {
+  .footer-rating-wrapper {
     align-items: center;
   }
 
